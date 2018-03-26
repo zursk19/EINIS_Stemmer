@@ -6,6 +6,7 @@ public class appIO {
 
     public String getText(String filePath){
 
+        String fileText;
         try{
             FileReader reader = new FileReader(filePath);
 
@@ -13,12 +14,13 @@ public class appIO {
                 char[] cbuf = new char[255];
                 ((Reader)reader).read(cbuf);
 
-                String string = new String(cbuf);
-            }
+                fileText = new String(cbuf);
+            } else
+                fileText = new String();
         } catch (Exception e) {
+            fileText = new String();
         }
 
-        return "";
+        return fileText;
     }
-    //public String StringToChar(char[] charArray){ }
 }
