@@ -63,7 +63,7 @@ public class Main extends Application {
         fileChooser.showOpenDialog();*/
 
         layout.getChildren().add(text);
-        layout.getChildren().add(runButton);
+        //layout.getChildren().add(runButton);
 
         Scene scene = new Scene(layout, 600, 400);
         primaryStage.setTitle("Polish-Language Stemmer");
